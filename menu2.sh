@@ -5,7 +5,7 @@
 #####################################################
 
 source /etc/functions.sh
-cd $HOME/multipool/daemon_builder
+cd $HOME/yiimp-data/daemon_builder
 
 RESULT=$(dialog --stdout --title "Ultimate Crypto-Server Daemon Installer" --menu "Choose one" -1 60 4 \
 1 "Install Berkeley 4.x Coin with autogen file" \
@@ -25,7 +25,7 @@ clear;
 echo '
 autogen=true
 berkeley="4.8"
-' | sudo -E tee $HOME/multipool/daemon_builder/.my.cnf >/dev/null 2>&1;
+' | sudo -E tee $HOME/yiimp-data/daemon_builder/.my.cnf >/dev/null 2>&1;
 source source.sh;
 fi
 
@@ -35,7 +35,7 @@ clear;
 echo '
 autogen=true
 berkeley="5.3"
-' | sudo -E tee $HOME/multipool/daemon_builder/.my.cnf >/dev/null 2>&1;
+' | sudo -E tee $HOME/yiimp-data/daemon_builder/.my.cnf >/dev/null 2>&1;
 source source.sh;
 fi
 
@@ -44,7 +44,7 @@ then
 clear;
 echo '
 autogen=false
-' | sudo -E tee $HOME/multipool/daemon_builder/.my.cnf >/dev/null 2>&1;
+' | sudo -E tee $HOME/yiimp-data/daemon_builder/.my.cnf >/dev/null 2>&1;
 source source.sh;
 fi
 

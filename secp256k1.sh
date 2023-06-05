@@ -4,8 +4,8 @@
 #####################################################
 
 source /etc/functions.sh
-source /etc/multipool.conf
-source $HOME/multipool/daemon_builder/.my.cnf
+source /etc/yiimpserver.conf
+source $HOME/yiimp-data/daemon_builder/.my.cnf
 source $STORAGE_ROOT/daemon_builder/temp_coin_builds/.lastcoin.conf
 cd $STORAGE_ROOT/daemon_builder/temp_coin_builds/${lastcoin}
 
@@ -99,14 +99,14 @@ echo "I am now going to open nano, please copy and paste the config from yiimp i
 read -n 1 -s -r -p "Press any key to continue"
 sudo nano $STORAGE_ROOT/wallets/."${coind::-1}"/${coind::-1}.conf
 clear
-cd $HOME/multipool/daemon_builder
+cd $HOME/yiimp-data/daemon_builder
 echo "Starting ${coind::-1}"
 "${coind}" -datadir=$STORAGE_ROOT/wallets/."${coind::-1}" -conf="${coind::-1}.conf" -daemon -shrinkdebugfile
 
 # If we made it this far everything built fine removing last coin.conf and build directory
 sudo rm -r $STORAGE_ROOT/daemon_builder/temp_coin_builds/.lastcoin.conf
 sudo rm -r $STORAGE_ROOT/daemon_builder/temp_coin_builds/${coindir}
-sudo rm -r $HOME/multipool/daemon_builder/.my.cnf
+sudo rm -r $HOME/yiimp-data/daemon_builder/.my.cnf
 
 
 clear

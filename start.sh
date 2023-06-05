@@ -6,9 +6,9 @@
 #####################################################
 
 source /etc/functions.sh # load our functions
-source /etc/multipool.conf
+source /etc/yiimpserver.conf
 
-cd $HOME/multipool/daemon_builder
+cd $HOME/yiimp-data/daemon_builder
 # Ensure Python reads/writes files in UTF-8. If the machine
 # triggers some other locale in Python, like ASCII encoding,
 # Python may not be able to read/write files. This is also

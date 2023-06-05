@@ -5,7 +5,7 @@
 #####################################################
 
 source /etc/functions.sh
-cd $HOME/multipool/daemon_builder
+cd $HOME/yiimp-data/daemon_builder
 
 RESULT=$(dialog --stdout --title "Ultimate Crypto-Server Daemon Installer" --menu "Choose one" -1 60 10 \
 1 "Make clean - does not build only cleans build dir" \

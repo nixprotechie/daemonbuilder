@@ -6,17 +6,17 @@
 #####################################################
 
 source /etc/functions.sh # load our functions
-source /etc/multipool.conf
+source /etc/yiimpserver.conf
 
 echo '
 #!/usr/bin/env bash
 source /etc/functions.sh # load our functions
-source /etc/multipool.conf
-cd $HOME/multipool/daemon_builder
+source /etc/yiimpserver.conf
+cd $HOME/yiimp-data/daemon_builder
 bash start.sh
 cd ~
 ' | sudo -E tee /usr/bin/daemonbuilder >/dev/null 2>&1
 sudo chmod +x /usr/bin/daemonbuilder
 
-cd $HOME/multipool/daemon_builder
+cd $HOME/yiimp-data/daemon_builder
 source start.sh

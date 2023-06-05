@@ -5,7 +5,7 @@
 #####################################################
 
 source /etc/functions.sh
-cd $HOME/multipool/daemon_builder
+cd $HOME/yiimp-data/daemon_builder
 
 RESULT=$(dialog --stdout --nocancel --default-item 1 --title "Ultimate Crypto-Server Daemon Installer v1.36" --menu "Choose one" -1 60 8 \
 ' ' "- New and existing Daemon builds and upgrade -" \
@@ -24,21 +24,21 @@ fi
 if [ $RESULT = 1 ]
 then
 clear;
-cd $HOME/multipool/daemon_builder
+cd $HOME/yiimp-data/daemon_builder
 source menu2.sh;
 fi
 
 if [ $RESULT = 2 ]
 then
 clear;
-cd $HOME/multipool/daemon_builder
+cd $HOME/yiimp-data/daemon_builder
 source menu3.sh;
 fi
 
 if [ $RESULT = 3 ]
 then
 clear;
-cd $HOME/multipool/daemon_builder
+cd $HOME/yiimp-data/daemon_builder
 source errors.sh;
 fi
 
